@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="container">
+{% for item in card %}
+<h4>Item name: {{item.name}}<br></h4>
+<h4>Item Price:  {{item.price}}<br></h4>
+<h4>Item Id:  {{item.id}}<br></h4>
+<a href="/delete/{{item.id}}">Remove Item</a><br>
+{% endfor %}
+
+</div>
+{% endblock %}

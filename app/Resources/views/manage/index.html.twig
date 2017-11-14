@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Manages list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for manage in manages %}
+            <tr>
+                <td><a href="{{ path('manage_show', { 'id': manage.id }) }}">{{ manage.id }}</a></td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('manage_show', { 'id': manage.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

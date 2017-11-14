@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="container">
+
+{% for product in products %}
+  {{product.name}}<br>
+  {{product.id}}<br>
+  {{product.price}}<br>
+  <img src="images/{{product.image}}" alt="">
+<form  action="/addtocard" method="post">
+<input type="hidden" name="product_id" value="{{product.id}}">
+<input type="hidden" name="pname" value="{{product.name}}">
+<input type="hidden" name="pprice" value="{{product.price}}">
+<input type="hidden" name="pprice" value="{{product.image}}">
+
+
+<input type="submit" name="submit" value="add to cart">
+</form>
+{% endfor %}
+</div>
+{% endblock %}
