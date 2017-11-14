@@ -25,7 +25,7 @@ class Products
           }
 
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(type="string", length=100, nullable=true)
      */
   private $name;
   public function setName($name)
@@ -39,7 +39,7 @@ class Products
 
 
     /**
-     * @ORM\Column(type="decimal", scale=2)
+     * @ORM\Column(type="decimal", scale=2, nullable=true)
      */
     private $price;
 
@@ -54,7 +54,7 @@ class Products
 
 
       /**
-       * @ORM\Column(type="text")
+       * @ORM\Column(type="text", nullable=true)
        */
     private $description;
     public function setdescription($description)
@@ -69,7 +69,7 @@ class Products
             }
 
             /**
-             * @ORM\Column(type="text", scale=2)
+             * @ORM\Column(type="text", scale=2, nullable=true)
              */
   private $image;
   public function setimage($image)

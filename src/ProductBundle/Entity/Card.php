@@ -46,7 +46,7 @@ public function getproduct_id()
         return $this->product_id;
         }
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(type="string", length=100, nullable=true)
      */
 
 
@@ -62,7 +62,7 @@ public function getproduct_id()
 
 
       /**
-       * @ORM\Column(type="decimal", scale=2)
+       * @ORM\Column(type="decimal", scale=2 , nullable=true)
        */
       private $price;
 
@@ -76,7 +76,7 @@ public function getproduct_id()
               }
 
               /**
-               * @ORM\Column(type="decimal", scale=2)
+               * @ORM\Column(type="decimal", scale=2, nullable=true)
                */
   private $image;
 
